@@ -1,0 +1,31 @@
+main{
+    .banner{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0 80px;
+        text-align: center;
+        height: 80vh;
+        background: map-get($color,negro);
+        img{
+            width: 25vw;
+            transition: 0.1s linear;
+            border-radius: 50%;
+        }
+        .banner-content{
+            h2{
+                font-weight: 500;
+                font-size: 30px;
+                margin: 0 0 10px;
+            }
+            p{
+                margin: 0;
+                line-height: 1.65;
+                font-size: 17px;
+                opacity: 0.7;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.cabesa{
+    nav{
+        .item{
+            .dropdown{
+                a{
+                    background-color: map-get($color, celeste);
+                }
+            }
+        }
+        .underline{
+            background-color: map-get($color, celeste);
+            transform: translate(200%, 0);
+        }
+    }
+}

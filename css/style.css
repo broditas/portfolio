@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  color: #ddfdfd;
+  background-color: #050808; }
+
+.cabesinha {
+  background: #050808;
+  color: white;
+  margin: 0;
+  height: 10vh;
+  place-items: start;
+  justify-items: center;
+  display: grid; }
+  .cabesinha nav {
+    position: relative;
+    background: #050808;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 80%; }
+    .cabesinha nav .item {
+      font-size: 0.8rem;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      z-index: 5;
+      min-width: 25%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center; }
+      .cabesinha nav .item .dropdown {
+        overflow: hidden;
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        left: 0;
+        top: 62px; }
+        .cabesinha nav .item .dropdown div {
+          transform: translate(0, -100%);
+          transition: all 0.5s 0.1s;
+          position: relative; }
+        .cabesinha nav .item .dropdown a {
+          display: block;
+          padding: 0;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          background: #B0724E; }
+          .cabesinha nav .item .dropdown a:hover {
+            background: #050808; }
+
+.underline {
+  height: 6px;
+  background: #B0724E;
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.35s; }
+
+nav .item:hover > .dropdown > div {
+  transform: translate(0); }
+
+nav .item:nth-child(1):hover ~ .underline {
+  transform: translate(0, 0); }
+
+nav .item:nth-child(2):hover ~ .underline {
+  transform: translate(100%, 0); }
+
+nav .item:nth-child(3):hover ~ .underline {
+  transform: translate(200%, 0); }
+
+nav .item:nth-child(4):hover ~ .underline {
+  transform: translate(300%, 0); }
+
+.cabesa nav .item .dropdown a {
+  background-color: #86DEEC; }
+
+.cabesa nav .underline {
+  background-color: #86DEEC;
+  transform: translate(200%, 0); }
+
+main .banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 80px;
+  text-align: center;
+  height: 80vh;
+  background: #050808; }
+  main .banner img {
+    width: 25vw;
+    transition: 0.1s linear;
+    border-radius: 50%; }
+  main .banner .banner-content h2 {
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0 0 10px; }
+  main .banner .banner-content p {
+    margin: 0;
+    line-height: 1.65;
+    font-size: 17px;
+    opacity: 0.7; }
+
+footer svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30vw;
+  max-height: 110px; }
+
+footer .waves use {
+  animation: move-forever 2s -2s linear infinite; }
+  footer .waves use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 6s; }
+  footer .waves use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 3s; }
+
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%); }
+  100% {
+    transform: translate(85px, 0%); } }

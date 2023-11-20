@@ -1,0 +1,85 @@
+.cabesinha{
+  background: #050808;
+  color: white;
+  margin: 0;
+  height: 10vh;
+  place-items: start;
+  justify-items: center;
+  display: grid;
+  nav{
+    position: relative;
+    background: #050808;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 80%;
+    .item {
+      font-size: 0.8rem;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      z-index: 5;
+      min-width: 25%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      .dropdown {
+        overflow: hidden;
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        left: 0;
+        top: 62px;
+        div {
+          transform: translate(0, -100%);
+          transition: all 0.5s 0.1s;
+          position: relative;
+        }
+        a {
+          display: block;
+          padding: 0;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          background: map-get($color, marron);
+          &:hover{
+            background: #050808;
+          }
+        }
+      }
+    }
+  }
+}
+
+.underline {
+  height: 6px;
+  background: map-get($color, marron);
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.35s;
+}
+
+nav .item:hover > .dropdown > div {
+  transform: translate(0);
+}
+
+nav .item:nth-child(1):hover ~ .underline {
+  transform: translate(0, 0);
+}
+
+nav .item:nth-child(2):hover ~ .underline {
+  transform: translate(100%, 0);
+}
+
+nav .item:nth-child(3):hover ~ .underline {
+  transform: translate(200%, 0);
+}
+
+nav .item:nth-child(4):hover ~ .underline {
+  transform: translate(300%, 0);
+}
